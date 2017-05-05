@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Document</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+		<link rel="stylesheet" href="../../template/mis/page/Css/login.css" />
+		<script type="text/javascript" src="../../template/mis/page/Js/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="../../template/mis/page/Js/login.js"></script>
+		<link rel="stylesheet" href="../../template/mis/page/Css/public.css" />
+	</head>
+
+	<body>
+		<table class='table'>
+			<tr>
+				<th>ID</th>
+				<th>名称</th>
+				<th>排序</th>
+				<th>操作</th>
+			</tr>
+
+			{%foreach $data.list as $key => $value%}
+			<tr>
+				<td>{%$value.id%}</td>
+				<td>{%$value.name%}</td>
+				<td>{%$value.sort%}</td>
+				<td>
+					[<a>删除</a>]
+					[<a>添加子分类</a>]
+				</td>
+			</tr>
+			{%/foreach%}
+		</table>
+	</body>
+
+
+
+</html>
